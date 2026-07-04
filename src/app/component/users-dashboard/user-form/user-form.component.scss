@@ -1,0 +1,9 @@
+
+
+.form-control.ng-invalid.ng-touched {
+  border: 2px solid red !important;
+}
+
+.form-control.ng-valid.ng-touched {
+  border: 2px solid green;
+}

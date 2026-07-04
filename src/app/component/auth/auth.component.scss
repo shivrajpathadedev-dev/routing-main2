@@ -1,0 +1,45 @@
+
+.main-auth{
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg,#0f766e,#2dd4bf);
+
+    form {
+.ng-touched.ng-invalid,
+    .ng-dirty.ng-invalid{
+        border: 2px solid red;
+    }
+}
+}
+
+.auth-card{
+    width:430px;
+    border:none;
+    border-radius:15px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.card-body{
+    padding:35px;
+}
+
+.form-control{
+    height:48px;
+    border-radius:8px;
+}
+
+.btn{
+    height:48px;
+    border-radius:8px;
+    font-weight:600;
+}
+
+h2{
+    font-weight:700;
+}
+
