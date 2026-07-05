@@ -1,39 +1,37 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <a class="navbar-brand" 
-        routerLinkActive="active"
-  routerLink="">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" routerLink="" routerLinkActive="active">
+    Navbar
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" 
-        routerLinkActive="active"
-        routerLink="home">Home <span class="sr-only">(current)</span></a>
-      </li>
+
+    <!-- Left Menu -->
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link"
-        routerLinkActive="active"
-        
-         routerLink="users">Users</a>
+        <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link" 
-        routerLinkActive="active"
-        
-        routerLink="product">Products</a>
+        <a class="nav-link" routerLink="users" routerLinkActive="active">Users</a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link" 
-        routerLinkActive="active"
-        
-        routerLink="fairs">Fairs</a>
+        <a class="nav-link" routerLink="product" routerLinkActive="active">Products</a>
       </li>
-      <button 
-    (click)="onlogOut()"
-     mat-raised-button color="warn">Log Out</button>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="fairs" routerLinkActive="active">Fairs</a>
+      </li>
     </ul>
-    
+
+    <!-- Right Button -->
+    <button mat-raised-button color="warn" (click)="onlogOut()">
+      Log Out
+    </button>
+
   </div>
 </nav>
