@@ -43,10 +43,10 @@ export class AuthService {
     localStorage.setItem('userRole', userRole)
   }
 
-  getToken() {
-    localStorage.getItem('token')
+  getToken():string | null{
+    return localStorage.getItem('token')
   }
-  getuserRole() {
-    localStorage.getItem('userRole')
+  getuserRole():string | null{
+   return localStorage.getItem('userRole')
   }
 }

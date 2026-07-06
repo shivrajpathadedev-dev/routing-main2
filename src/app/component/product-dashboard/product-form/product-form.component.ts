@@ -101,4 +101,11 @@ isInEditMode:boolean=false
         }
       });
   }
+
+  canDeactivate(): boolean {
+  if (this.productForm.dirty) {
+    return confirm("Are you sure you want to discard the changes?");
+  }
+  return true;
+}
 }

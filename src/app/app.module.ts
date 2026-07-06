@@ -26,6 +26,7 @@ import { FairsDetailsComponent } from './component/fairs-dashboard/fairs-details
 import { AuthComponent } from './component/auth/auth.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { PathNotFoundComponent } from './component/path-not-found/path-not-found.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CommonModule } from '@angular/common';
     FairsDashboardComponent,
     FairsCardComponent,
     FairsDetailsComponent,
-    AuthComponent
+    AuthComponent,
+    PathNotFoundComponent
   ],
   imports: [
     BrowserModule,

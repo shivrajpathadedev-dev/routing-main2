@@ -176,4 +176,12 @@ export class UserFormComponent implements OnInit {
         })
     }
   }
+
+  canDeactivate(){
+    if(this.userForm.dirty){
+      let getconfirm=confirm(`Are you sure do you want to diascard this changes?`)
+      return getconfirm
+    }
+    return true
+  }
 }

@@ -10,6 +10,10 @@ import { UserComponent } from './component/users-dashboard/user/user.component';
 import { FairsDashboardComponent } from './component/fairs-dashboard/fairs-dashboard.component';
 import { FairsDetailsComponent } from './component/fairs-dashboard/fairs-details/fairs-details.component';
 import { AuthComponent } from './component/auth/auth.component';
+import { PathNotFoundComponent } from './component/path-not-found/path-not-found.component';
+import { AuthGuard } from './services/auth.guard';
+import { userRoleGuard } from './services/userRole.guard';
+import { CanDeactivateGuard } from './services/can-deactivate.guard';
 
 const routes: Routes = [
   {
@@ -18,16 +22,27 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate:[AuthGuard,userRoleGuard],
+    title: 'Home',
+     data: {
+      userRole: ['buyer', 'Admin', 'superAdmin']
+    }
   },
 
   {
     path: 'users',
     component: UsersDashboardComponent,
+    canActivate:[AuthGuard,userRoleGuard],
+     data: {
+      userRole: ['Admin', 'superAdmin']
+    },
+    title: 'Users',
     children: [
       {
         path: 'addusers',
-        component: UserFormComponent
+        component: UserFormComponent,
+    canDeactivate:[CanDeactivateGuard]
       },
       {
         path: ':uid',
@@ -35,16 +50,23 @@ const routes: Routes = [
       },
       {
         path: ':uid/edit',
-        component: UserFormComponent
+        component: UserFormComponent,
+    canDeactivate:[CanDeactivateGuard]
       }
     ]
   },
   {
     path: 'product',
     component: ProductDashboardComponent,
+    canActivate:[AuthGuard,userRoleGuard],
+     data: {
+      userRole: ['buyer', 'Admin', 'superAdmin']
+    },
+    title: 'Products',
     children: [
       {
         path: 'addproduct',
+    canDeactivate:[CanDeactivateGuard],
         component: ProductFormComponent
       },
       {
@@ -53,6 +75,7 @@ const routes: Routes = [
       },
       {
         path: ':pid/edit',
+    canDeactivate:[CanDeactivateGuard],
         component: ProductFormComponent
       },
     ]
@@ -60,12 +83,28 @@ const routes: Routes = [
   {
     path: 'fairs',
     component: FairsDashboardComponent,
+    canActivate:[AuthGuard,userRoleGuard],
+     data: {
+      userRole: ['superAdmin']
+    },
+    title: "Fairs",
     children: [
       {
         path: ':id',
         component: FairsDetailsComponent
       }
     ]
+  },
+  {
+    path: 'path-not-found',
+    component: PathNotFoundComponent,
+    data: {
+      msg: `page not found using static data !!!`
+    }
+  },
+  {
+    path: '**',
+    redirectTo: 'page-not-found'
   }
 ];
 
