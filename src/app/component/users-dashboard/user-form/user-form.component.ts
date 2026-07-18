@@ -48,6 +48,14 @@ export class UserFormComponent implements OnInit {
       })
   }
 
+ Onremove() {
+  if (this.skillsArr.length > 1) {
+    this.skillsArr.removeAt(this.skillsArr.length - 1);
+  } else {
+    alert('At least one skill is required.');
+  }
+}
+
   createUserForm() {
     this.userForm = new FormGroup({
       userName: new FormControl(null, [Validators.required]),

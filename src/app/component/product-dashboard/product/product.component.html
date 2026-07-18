@@ -1,7 +1,7 @@
 
-<div class="row">
-  <div class="col-md-8" *ngIf="productId">
-    <mat-card class="product-card">
+
+ <mat-card class="product-card">
+          <img mat-card-image [src]="productObj.pimg" alt="{{ productObj.pname }}" />
       <mat-card-content>
         <p>
           The Product is {{productObj.pname}} And It's Status is
@@ -12,13 +12,8 @@
         <button [routerLink]="['/product',productObj.pid,'edit']" mat-raised-button color="primary">
           Edit
         </button>
-        <button 
-        routerLinkActive="active"
-        (click)="onRemove()" mat-raised-button color="warn">
+        <button routerLinkActive="active" (click)="onRemove()" mat-raised-button color="warn">
           Remove
         </button>
       </mat-card-actions>
     </mat-card>
-  </div>
-  
-</div>

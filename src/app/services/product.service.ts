@@ -6,48 +6,34 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-productsArr:Array<Iproduct>= [
+productsArr: Array<Iproduct> = [
   {
-    pname: 'Dell Inspiron Laptop',
+    pname: 'Samsung Galaxy S24',
     pid: '201',
     pstatus: 'In-Progress',
     canReturn: 1,
-    pimg: 'https://picsum.photos/id/180/300/200'
+    pimg: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500'
   },
   {
-    pname: 'HP Laser Printer',
+    pname: 'iPhone 15 Pro',
     pid: '202',
     pstatus: 'Delivered',
     canReturn: 0,
-    pimg: 'https://picsum.photos/id/250/300/200'
+    pimg: 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=500'
   },
   {
-    pname: 'Boat Rockerz 550',
+    pname: 'Google Pixel 9',
     pid: '203',
     pstatus: 'Dispatched',
     canReturn: 1,
-    pimg: 'https://picsum.photos/id/20/300/200'
+    pimg: 'https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500'
   },
   {
-    pname: 'Apple iPad Air',
+    pname: 'OnePlus 12',
     pid: '204',
-    pstatus: 'In-Progress',
-    canReturn: 1,
-    pimg: 'https://picsum.photos/id/30/300/200'
-  },
-  {
-    pname: 'Canon EOS Camera',
-    pid: '205',
     pstatus: 'Delivered',
-    canReturn: 0,
-    pimg: 'https://picsum.photos/id/96/300/200'
-  },
-  {
-    pname: 'JBL Bluetooth Speaker',
-    pid: '206',
-    pstatus: 'Dispatched',
     canReturn: 1,
-    pimg: 'https://picsum.photos/id/1080/300/200'
+    pimg: 'https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=500'
   }
 ];
   constructor() { }

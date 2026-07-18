@@ -26,6 +26,8 @@ isInEditMode:boolean=false
   this.patchProductData();
   }
 
+
+
   createProductForm() {
     this.productForm = new FormGroup({
       pname: new FormControl(null, [Validators.required]),

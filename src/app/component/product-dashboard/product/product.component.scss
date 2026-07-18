@@ -31,3 +31,10 @@ button {
   min-width: 100px;
   border-radius: 6px;
 }
+
+.product-card img {
+    width: 95%;
+    height: 400px;
+    object-fit: contain;
+    background-color: #fff;
+}
