@@ -84,12 +84,12 @@ export class UserFormComponent implements OnInit {
     })
   }
 
-  addskillcontrol() {
-    if (this.formControl['skills'].valid) {
-      let skillControl = new FormControl(null, [Validators.required])
-      this.skillsArr.push(skillControl)
-    }
+addskillcontrol() {
+  if (this.formControl['skills'].valid && this.skillsArr.length < 5) {
+    let skillControl = new FormControl(null, [Validators.required]);
+    this.skillsArr.push(skillControl);
   }
+}
 
   get formControl() {
     return this.userForm.controls

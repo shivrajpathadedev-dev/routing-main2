@@ -35,9 +35,7 @@ userId!:string
       })
     })
   }
-
- 
-
+  
   onRemoveUser() {
     let matconfig = new MatDialogConfig()
     matconfig.width = '450px',
